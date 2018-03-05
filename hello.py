@@ -1,12 +1,16 @@
 
+quieres_helado = input ('Te apetece un helado? (Si/No): ').upper()
+esta_tu_tia = input ('Esta tu tia para comprartelo? (Si/No): ').upper()
+hay_dinero = input ('Tienes dinero para compralo? (Si/No): ').upper()
+esta_el_senor = input ('Esta el señor de los helados? (Si/No): ').upper()
 
 
-quieres_helado = input ('Te apetece un helado? (Y/N)')
-hay_dinero = input ('Tienes dinero para compralo? (Y/N)')
-esta_el_senor = input ('Esta el se;or de los helados? (Y/N)')
+apetece_helado = quieres_helado == 'SI'and esta_el_senor == 'SI'
+tienes_como = hay_dinero == 'SI' or esta_tu_tia == 'SI'
 
-if quieres_helado == 'Y' and hay_dinero == 'Y':
-    print('Bien, pues dale')
+
+if apetece_helado == True and tienes_como == True:
+    print('Bien, pues dale, comete un helado')
 
 else:
-    print('Que pena')
+    print('Ash, que pena, sera para la proxima entonces...')
